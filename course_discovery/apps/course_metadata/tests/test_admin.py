@@ -238,6 +238,7 @@ class ProgramAdminFunctionalTests(SiteMixin, TestCase, LiveServerTestCase):
         opts.headless = True
         cls.browser = webdriver.Firefox(options=opts)
         cls.browser.set_window_size(1024, 768)
+        cls._start_server_thread()
 
     @classmethod
     def tearDownClass(cls):

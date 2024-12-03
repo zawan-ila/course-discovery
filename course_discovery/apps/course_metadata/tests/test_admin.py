@@ -223,7 +223,7 @@ class AdminTests(SiteMixin, TestCase):
         assert response.status_code == 200
 
 
-class ProgramAdminFunctionalTests(SiteMixin, LiveServerTestCase):
+class ProgramAdminFunctionalTests(SiteMixin, TestCase, LiveServerTestCase):
     """ Functional Tests for Admin page."""
     # Required for access to initial data loaded in migrations (e.g., LanguageTags).
     serialized_rollback = True
